@@ -125,3 +125,16 @@ by Prelude.")
  (run-at-time 5 nil 'prelude-tip-of-the-day))
 
 ;;; init.el ends here
+
+;;; custom
+(require 'package)
+(package-initialize)
+(cua-mode t)
+(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
+(transient-mark-mode 1) ;; No region when it is not highlighted
+(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
+(global-linum-mode t)
+(global-set-key "\C-m" 'newline-and-indent)
+(setq-default cursor-type 'bar)
+(disable-theme 'zenburn)
+
